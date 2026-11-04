@@ -55,4 +55,20 @@ class PaysTest {
 
         assertEquals(3, pays.getNbOr());
     }
+    @Test
+    void testGetTypeMedaille(){
+        Pays pays = new Pays(1, "France");
+        pays.addMedaille(new Medaille(1, "or", 3));
+        pays.addMedaille(new Medaille(2, "or", 3));
+        pays.addMedaille(new Medaille(3, "or", 3));
+        pays.addMedaille(new Medaille(4, "argent", 2));
+        pays.addMedaille(new Medaille(5, "bronze", 1));
+        pays.addMedaille(new Medaille(6, "bronze", 1));
+        pays.addMedaille(new Medaille(7, "bronze", 1));
+
+        assertEquals(3, pays.getTypeMedaille("bronze"));
+        assertEquals(1, pays.getTypeMedaille("argent"));
+        assertEquals(3, pays.getTypeMedaille("or"));
+
+    }
 }

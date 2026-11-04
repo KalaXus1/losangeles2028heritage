@@ -99,4 +99,13 @@ public class Pays {
         }
         return cpt;
     }
+    public int getTypeMedaille(String typeMedaille){
+        int cpt = 0;
+        for(Medaille m : lesMedailles){
+            if (Objects.equals(m.getNom(), typeMedaille)){
+                cpt+=1;
+            }
+        }
+        return cpt;
+    }
 }
