@@ -2,7 +2,7 @@ package main.java.model;
 
 import java.util.ArrayList;
 
-public class EpreuveIndividuelle {
+public class EpreuveIndividuelle extends Epreuve {
     private double recordOlympique;
     private String unite;
     private ArrayList<Participation> lesParticipations = new ArrayList<>();
