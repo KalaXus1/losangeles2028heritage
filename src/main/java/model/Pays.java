@@ -1,6 +1,7 @@
 package main.java.model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Pays {
     private int id;
@@ -87,5 +88,15 @@ public class Pays {
           total = total + m.getNbPoints();
         };
         return total;
+    }
+
+    public int getNbOr(){
+        int cpt = 0;
+        for(Medaille m : lesMedailles){
+            if (Objects.equals(m.getNom(), "or")){
+                cpt+=1;
+            }
+        }
+        return cpt;
     }
 }
