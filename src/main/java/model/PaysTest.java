@@ -22,4 +22,14 @@ class PaysTest {
 
         assertEquals(1, pays.getLesMedailles().size());
     }
+
+    @Test
+    void testGetNbAthlete(){
+        Pays pays = new Pays(1, "France");
+        pays.addAthlete(new Athlete(1, "Leon Marchand"));
+        pays.addAthlete(new Athlete(2, "Tony Parker"));
+
+        assertEquals(2, pays.getNbAthlete());
+
+    }
 }

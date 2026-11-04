@@ -73,7 +73,11 @@ public class Pays {
         lesAthletes.add(a);
     }
 
-    public void addEpreuvesCollectives(Epreuve e){
+    public void addEpreuvesCollectives(EpreuveCollective e){
         lesEpreuvesCollectives.add(e);
+    }
+
+    public int getNbAthlete(){
+        return lesAthletes.size();
     }
 }
