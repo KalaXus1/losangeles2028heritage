@@ -10,7 +10,8 @@ public class EpreuveCollective extends Epreuve {
     public EpreuveCollective() {
     }
 
-    public EpreuveCollective(int dureeMin, int nbTours, ArrayList<Pays> lesPays) {
+    public EpreuveCollective(int id, String nom, Sport sport, int dureeMin, int nbTours, ArrayList<Pays> lesPays) {
+        super(id, nom, sport);
         this.dureeMin = dureeMin;
         this.nbTours = nbTours;
         this.lesPays = lesPays;
