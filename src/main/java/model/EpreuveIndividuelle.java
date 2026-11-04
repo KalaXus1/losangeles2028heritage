@@ -39,4 +39,7 @@ public class EpreuveIndividuelle extends Epreuve {
     public void setLesParticipations(ArrayList<Participation> lesParticipations) {
         this.lesParticipations = lesParticipations;
     }
+    public void addParticipation(Participation p){
+        lesParticipations.add(p);
+    }
 }

@@ -39,4 +39,7 @@ public class EpreuveCollective extends Epreuve {
     public void setLesPays(ArrayList<Pays> lesPays) {
         this.lesPays = lesPays;
     }
+    public void addPays(Pays p){
+        lesPays.add(p);
+    }
 }

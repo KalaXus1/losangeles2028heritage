@@ -59,4 +59,13 @@ public class Medaille {
     public void setLesPays(ArrayList<Pays> lesPays) {
         this.lesPays = lesPays;
     }
+
+    public void addParticipation(Participation p){
+        lesParticipations.add(p);
+    }
+
+    public void addPays(Pays p){
+        lesPays.add(p);
+    }
+
 }

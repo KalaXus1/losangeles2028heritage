@@ -49,4 +49,8 @@ public class Athlete {
     public void setPays(Pays pays) {
         this.pays = pays;
     }
+
+    public void addParticiaption(Participation p){
+        lesParticipations.add(p);
+    }
 }

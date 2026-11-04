@@ -59,4 +59,16 @@ public class Pays {
     public void setLesMedailles(ArrayList<Medaille> lesMedailles) {
         this.lesMedailles = lesMedailles;
     }
+
+    public void addMedaille(Medaille m){
+        lesMedailles.add(m);
+    }
+
+    public void addAthlete(Athlete a){
+        lesAthletes.add(a);
+    }
+
+    public void addEpreuvesCollectives(Epreuve e){
+        lesEpreuvesCollectives.add(e);
+    }
 }

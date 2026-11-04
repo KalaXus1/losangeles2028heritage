@@ -36,4 +36,8 @@ public class Sport {
     public void setLesEpreuves(ArrayList<Epreuve> lesEpreuves) {
         this.lesEpreuves = lesEpreuves;
     }
+
+    public void addEpreuve(Epreuve e){
+        lesEpreuves.add(e);
+    }
 }
