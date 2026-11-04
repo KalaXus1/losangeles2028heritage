@@ -80,4 +80,12 @@ public class Pays {
     public int getNbAthlete(){
         return lesAthletes.size();
     }
+
+    public int getNbPoints(){
+        int total = 0;
+        for(Medaille m : lesMedailles){
+          total = total + m.getNbPoints();
+        };
+        return total;
+    }
 }
