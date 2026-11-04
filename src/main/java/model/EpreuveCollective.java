@@ -43,4 +43,8 @@ public class EpreuveCollective extends Epreuve {
     public void addPays(Pays p){
         lesPays.add(p);
     }
+
+    public int getNbPays(){
+        return lesPays.size();
+    }
 }

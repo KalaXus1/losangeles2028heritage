@@ -11,6 +11,11 @@ public class Athlete {
     public Athlete() {
     }
 
+    public Athlete(int id, String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
+
     public Athlete(int id, String nom, Pays pays, ArrayList<Participation> lesParticipations) {
         this.id = id;
         this.nom = nom;

@@ -12,6 +12,12 @@ public class Medaille {
     public Medaille() {
     }
 
+    public Medaille(int id, String nom, int nbPoints) {
+        this.id = id;
+        this.nom = nom;
+        this.nbPoints = nbPoints;
+    }
+
     public Medaille(int id, String nom, int nbPoints, ArrayList<Participation> lesParticipations, ArrayList<Pays> lesPays) {
         this.id = id;
         this.nom = nom;

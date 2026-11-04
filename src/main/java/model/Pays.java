@@ -12,6 +12,11 @@ public class Pays {
     public Pays() {
     }
 
+    public Pays(int id, String nom) {
+        this.nom = nom;
+        this.id = id;
+    }
+
     public Pays(int id, String nom, ArrayList<Athlete> lesAthletes, ArrayList<EpreuveCollective> lesEpreuvesCollectives, ArrayList<Medaille> lesMedailles) {
         this.id = id;
         this.nom = nom;

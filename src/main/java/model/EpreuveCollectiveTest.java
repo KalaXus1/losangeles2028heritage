@@ -24,4 +24,13 @@ class EpreuveCollectiveTest {
 
         assertEquals(1, basket.getLesPays().size());
     }
+
+    @Test
+    void testGetNbPays(){
+        EpreuveCollective basket = new EpreuveCollective();
+        basket.addPays(new Pays(1, "France"));
+        basket.addPays(new Pays(2, "Espagne"));
+        basket.addPays(new Pays(3, "Angleterre"));
+        assertEquals(3, basket.getNbPays());
+    }
 }
