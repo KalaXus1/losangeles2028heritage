@@ -1,6 +1,7 @@
 package main.java.model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Pays {
     private int id;
@@ -10,6 +11,11 @@ public class Pays {
     private ArrayList<Medaille> lesMedailles = new ArrayList<>();
 
     public Pays() {
+    }
+
+    public Pays(int id, String nom) {
+        this.nom = nom;
+        this.id = id;
     }
 
     public Pays(int id, String nom, ArrayList<Athlete> lesAthletes, ArrayList<EpreuveCollective> lesEpreuvesCollectives, ArrayList<Medaille> lesMedailles) {
@@ -68,7 +74,38 @@ public class Pays {
         lesAthletes.add(a);
     }
 
-    public void addEpreuvesCollectives(Epreuve e){
+    public void addEpreuvesCollectives(EpreuveCollective e){
         lesEpreuvesCollectives.add(e);
+    }
+
+    public int getNbAthlete(){
+        return lesAthletes.size();
+    }
+
+    public int getNbPoints(){
+        int total = 0;
+        for(Medaille m : lesMedailles){
+          total = total + m.getNbPoints();
+        };
+        return total;
+    }
+
+    public int getNbOr(){
+        int cpt = 0;
+        for(Medaille m : lesMedailles){
+            if (Objects.equals(m.getNom(), "or")){
+                cpt+=1;
+            }
+        }
+        return cpt;
+    }
+    public int getTypeMedaille(String typeMedaille){
+        int cpt = 0;
+        for(Medaille m : lesMedailles){
+            if (Objects.equals(m.getNom(), typeMedaille)){
+                cpt+=1;
+            }
+        }
+        return cpt;
     }
 }

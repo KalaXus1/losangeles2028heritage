@@ -11,6 +11,12 @@ public class Participation {
     public Participation() {
     }
 
+    public Participation(int place, double temps, boolean recordOlympique) {
+        this.place = place;
+        this.temps = temps;
+        this.recordOlympique = recordOlympique;
+    }
+
     public Participation(int place, double temps, boolean recordOlympique, Athlete athlete, EpreuveIndividuelle epreuveIndividuelle, Medaille medaille) {
         this.place = place;
         this.temps = temps;

@@ -10,7 +10,8 @@ public class EpreuveIndividuelle extends Epreuve {
     public EpreuveIndividuelle() {
     }
 
-    public EpreuveIndividuelle(double recordOlympique, String unite, ArrayList<Participation> lesParticipations) {
+    public EpreuveIndividuelle(int id, String nom, Sport sport, double recordOlympique, String unite, ArrayList<Participation> lesParticipations) {
+        super(id, nom, sport);
         this.recordOlympique = recordOlympique;
         this.unite = unite;
         this.lesParticipations = lesParticipations;
