@@ -1,0 +1,16 @@
+Sport(id, nom)
+Medaille(id, nom, nbPoints)
+Athlete(id, nom, #idPays)
+Epreuve(id, nom, #idSport)
+EpreuveIndividuelle(#id, recordOlympique, unite)
+EpreuveCollective(#id, dureeMin, nbTours)
+Participation(#idAthlete, #idEpreuveIndividuelle, place,temps, recordOlympique, #idMedaille)
+Participe(#idPays, #idEpreuveCollective)
+Pays(id,nom)
+Gagne(#idPays, #idMedaille)
+
+Clés primaires : 
+Epreuve, Pays, Medaille, Sport : id
+EpreuveIndividuelle.id et EpreuveCollective.id : Clé primaire et clé étrangère de Epreuve.id
+Participe : (idPays, idEpreuveCollective)
+Gagne : (idPays, idMedaille)
